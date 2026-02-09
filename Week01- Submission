@@ -333,6 +333,23 @@ Name:   google.com
 Address: 142.250.180.14
 Name:   google.com
 Address: 2a00:1450:400e:802::200e
+brindha@BrindhaKavin:~/devops_project$ netstat -tuln
+Active Internet connections (only servers)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State
+tcp        0      0 127.0.0.54:53           0.0.0.0:*               LISTEN
+tcp        0      0 10.255.255.254:53       0.0.0.0:*               LISTEN
+tcp        0      0 127.0.0.53:53           0.0.0.0:*               LISTEN
+tcp        0      0 0.0.0.0:80              0.0.0.0:*               LISTEN
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN
+tcp6       0      0 :::80                   :::*                    LISTEN
+tcp6       0      0 :::22                   :::*                    LISTEN
+udp        0      0 127.0.0.54:53           0.0.0.0:*
+udp        0      0 127.0.0.53:53           0.0.0.0:*
+udp        0      0 10.255.255.254:53       0.0.0.0:*
+udp        0      0 127.0.0.1:323           0.0.0.0:*
+udp6       0      0 ::1:323                 :::*
+brindha@BrindhaKavin:~/devops_project$ curl ifconfig.me
+94.157.37.54
 
 brindha@BrindhaKavin:~/devops_project$ vi explanation.txt
 brindha@BrindhaKavin:~/devops_project$ cat explanation.txt
@@ -342,6 +359,12 @@ ip a/ifconfig - Shows network interfaces and IP address
 ping -c 4 - Tests connectivity and response time
 traceroute - Shows route packets take to destination
 nslookup - Resolves domain name to IP address
+netstat -tuln - Shows listening TCP and UDP ports
+-t → Show TCP ports
+-u → Show UDP ports
+-l → Show listening ports
+-n → Show numeric addresses (no DNS resolution)
+curl ifconfig.me- Displays public IP address
 ----------------------------------------------------------------------------------------------------
 
 
